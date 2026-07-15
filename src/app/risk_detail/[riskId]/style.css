@@ -1,0 +1,305 @@
+
+/* Small screens */
+@media only screen and (max-width: 600px) { 
+    .risk-treatment-detail .main-table .header {
+        display: grid !important;
+    }
+    .inherent-risk-assessment-treatment .risk-score .header-risk-score::after {
+        width: 92% !important;
+    }
+}
+
+/* Medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .risk-treatment-detail .main-table .header {
+        display: grid !important;
+    }
+
+    .inherent-risk-assessment-treatment .risk-score .header-risk-score::after {
+        width: 92% !important;
+    }
+}
+
+@media only screen and (min-width: 1025px)  {
+    .risk-treatment-detail .main-table .header {
+        display: grid !important;
+    }
+}
+
+
+.red-text {
+    color: #C41E3A;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+}
+
+.description-detail {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.ar-descriptions-view {
+    padding: 0 25px;
+}
+
+.risk-detail .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 12px 0;
+
+}
+
+.risk-detail .header .title {
+    color:  #232D42;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%; 
+}
+
+.risk-detail .header  .btn-back {
+    border-radius: 8px;
+    border: 1px solid #D1D1D1;
+    background: #FFF;
+    margin-right: 14px;
+    color: #232D42;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.risk-detail .header  .btn-back .icon-arow-back {
+    width: 17.15px;
+    margin-right: 5px;
+    flex-shrink: 0;
+    fill: #D1D1D1;
+}
+
+.risk-detail .description-detail .ar-descriptions-title {
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid #4E73DF;
+    background: #4E73DF;
+    padding: 16px 25px;
+    color: #FFF;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%; /* 28px */
+}
+
+.risk-detail .description-detail .striped-table tbody tr:nth-child(odd) {
+    border: 1px solid #EAECF0;
+    background: #f0f1f3;
+}
+
+.risk-couse-detail .ar-table-wrapper {
+    padding: 16px 25px;
+}
+.risk-couse-detail .header .title {
+    color:  #232D42;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%; /* 28px */
+    padding: 0 25px;
+    margin: 0;
+}
+
+.risk-couse-detail .header {
+    margin: 12px 0;
+    margin-bottom: 0;
+}
+
+.inherent-risk-assessment-treatment {
+    margin-top: 20px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    background: #FFF;
+    border-radius: 8px;
+}
+
+.inherent-risk-assessment-treatment .header {
+    display: flex;
+    height: 50px;
+    padding: 16px 25px;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid #4E73DF;
+    background: #4E73DF;
+}
+
+.inherent-risk-assessment-treatment .header .title {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%; /* 28px */
+    margin: 0;
+}
+
+.inherent-risk-assessment-treatment .risk-score .header-risk-score {
+    padding: 16px 25px;
+    position: relative;
+}   
+
+.inherent-risk-assessment-treatment .risk-score .header-risk-score .title {
+    color: #232D42;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%; /* 28px */
+}
+
+.inherent-risk-assessment-treatment .risk-score .header-risk-score::after{
+    content: '';
+    background: rgba(0, 0, 0, 0.20);
+    height: 1px;
+    width: 97.5%;
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+}
+
+.inherent-risk-assessment-treatment .risk-score .striped-table tbody tr:nth-child(odd) {
+    border: 1px solid #EAECF0;
+    background: #f0f1f3;
+}
+
+.inherent-risk-assessment-treatment .risk-score .ar-table-wrapper {
+    padding: 16px 25px;
+}
+
+.additional-risk-treatment {
+    margin-top: 20px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 8px;
+}
+
+.additional-risk-treatment .header {
+    display: flex;
+    height: 50px;
+    padding: 16px 25px;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid #4E73DF;
+    background: #4E73DF;
+}
+
+.additional-risk-treatment .header .title {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%;
+    margin: 0;
+}
+
+.additional-risk-treatment .additional-risk-treatment-content .header-risk-score {
+    padding: 16px 25px;
+    position: relative;
+}   
+
+.additional-risk-treatment .additional-risk-treatment-content .header-risk-score .title {
+    color:#232D42;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%; /* 28px */
+}
+
+.additional-risk-treatment .additional-risk-treatment-content .header-risk-score::after{
+    content: '';
+    background: rgba(0, 0, 0, 0.20);
+    height: 1px;
+    width: 97.5%;
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+}
+
+.additional-risk-treatment .additional-risk-treatment-content .striped-table tbody tr:nth-child(odd) {
+    border: 1px solid #EAECF0;
+    background: #f0f1f3;
+} 
+
+.additional-risk-treatment .additional-risk-treatment-content .ar-table-wrapper {
+    padding: 16px 25px;
+}
+
+.additional-risk-treatment .additional-risk-treatment-content .ar-spin-nested-loading {
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 8px;
+}
+
+.additional-risk-treatment .additional-risk-treatment-content .ar-table-thead .ar-table-cell {
+    border-bottom: 1px solid #EAECF0;
+    border-top: 1px solid #EAECF0;
+    background: #F9FAFB;
+    color:  #8A92A6;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 175%; 
+    padding: 10px 20px;
+}
+
+.residual-risk-assessment {
+    margin-top: 20px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 8px;
+}
+
+.residual-risk-assessment .header {
+    display: flex;
+    height: 50px;
+    padding: 16px 25px;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid #4E73DF;
+    background: #4E73DF;
+}
+
+.residual-risk-assessment .header .title {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%; /* 28px */
+    margin: 0;
+}
+
+.residual-risk-assessment .residual-risk-assessment-content .header-risk-score {
+    padding: 16px 25px;
+    position: relative;
+}   
+
+.residual-risk-assessment .residual-risk-assessment-content .header-risk-score .title {
+    color: #232D42;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%; /* 28px */
+}
+
+.residual-risk-assessment .residual-risk-assessment-content .header-risk-score::after{
+    content: '';
+    background: rgba(0, 0, 0, 0.20);
+    height: 1px;
+    width: 97.5%;
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+}

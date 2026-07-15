@@ -1,0 +1,16 @@
+.main-table-risk-view {
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+form .btn-create {
+    width: 100%;
+    background-color: blue;
+    color: #fff;
+}
+.main-table-risk-view .loading-spin{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+}

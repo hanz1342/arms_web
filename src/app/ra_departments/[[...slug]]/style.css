@@ -1,0 +1,47 @@
+
+/* Small screens */
+@media only screen and (max-width: 600px) { 
+    
+}
+
+/* Medium screens */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    
+}
+
+@media only screen and (min-width: 1025px)  {
+    
+}
+
+.risk-profile-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 12px 20px 12px;
+}
+
+.risk-profile-form .title {
+    color: #4d4d4d;
+    margin: 0;
+}
+
+.risk-profile-form .ar-form-item-control {
+    width: 150px;
+}
+
+.risk-profile-form .ar-form-item:not(:last-child) {
+    margin-right: 12px;
+}
+
+.risk-profile-form .ar-form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.risk-profile-form .ar-form-item {
+    margin-bottom: 0;
+}
+
+.risk-profile-form-table {
+    margin: 0 12px;
+}

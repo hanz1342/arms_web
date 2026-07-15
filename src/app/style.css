@@ -1,0 +1,234 @@
+.main-home {
+   padding: 12px;
+   height: 100vh;
+}
+
+.main-home .risk-treatment-status .header {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 16px;
+}
+
+.main-home .risk-treatment-status .header .title {
+   color: #232D42;
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 175%; /* 31.5px */
+}
+
+.main-home .risk-treatment-status .header .btn-right-select .btn-right-filter:not(:last-child) {
+   margin-right: 10px;
+}
+
+.main-home .risk-treatment-status .header .btn-right-select .btn-right-filter .icon-bars-filter {
+   margin-right: 10px;
+}
+
+.main-home .cart-content {
+   width: inherit;
+   height: 117px;
+   flex-shrink: 0;
+   border-radius: 8px;
+   background: #FFF;
+   display: flex;
+   align-items: center;
+   padding: 20px;
+   box-shadow: 0px 10px 13px 0px rgba(17, 38, 146, 0.05);
+}
+
+.main-home .cart-content .icon-chart-area {
+   font-size: 25px;
+   color: #FFF;
+}
+
+.main-home .cart-content .icon {
+   width: 50px;
+   height: 50px;
+   border-radius: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-right: 40px;
+}
+
+.main-home .cart-content .chart1 {
+   background: #54E69D;
+}
+
+.main-home .cart-content .chart2 {
+   background: #DDDFEB;
+}
+
+.main-home .cart-content .chart3 {
+   background: #85B4F2;
+}
+
+.main-home .cart-content .chart4 {
+   background: #EEF157;
+}
+
+.main-home .cart-content .chart5 {
+   background: #FFC36D;
+}
+
+.main-home .cart-content .chart6 {
+   background: #FF7676;
+}
+
+.main-home .cart-content .text-cart {
+   padding-top: 10px;
+   display: grid;
+   align-items: end;
+}
+
+.main-home .cart-content .text-cart .text1 {
+   color: #8A92A6;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 175%; /* 28px */
+}
+
+.main-home .cart-content .text-cart .text2 {
+   color: #232D42;
+   font-size: 22px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 175%; /* 38.5px */
+}
+
+.text-risk-event {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   -webkit-line-clamp: 3; /* Set the number of lines to display */
+   max-height: 5em; /* Set the height of three lines */
+}
+
+.risk-summary {
+   margin-top: 20px;
+}
+
+.risk-summary .header .title {
+   color: #232D42;
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 600;
+   margin-bottom: 10px;
+}
+
+.risk-summary .table-content .ar-table-pagination {
+  display: none;
+}
+
+.risk-summary .table-content .ar-table-wrapper {
+   box-shadow: 0px 10px 13px 0px rgba(17, 38, 146, 0.05);
+   border-radius: 8px;
+}
+
+.risk-summary .table-content .main-footer {
+   border-radius: 0px 0px 8px 8px;
+   border-bottom: 1px solid #EAECF0;
+   border-top: 1px solid #EAECF0;
+   background: #FFF;
+   margin: 0;
+   padding: 14px 12px;
+   display: flex;
+   justify-content: flex-end;
+}
+
+
+
+.risk-summary .table-content .main-footer .pagination-footer li {
+   color: #344054;
+   font-family: Inter;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 20px;
+   margin: 0 2px;
+}
+
+.risk-summary .table-content .main-footer .pagination-footer li a {
+   color: #344054;
+   font-family: Inter;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 500;
+}
+
+.risk-summary .table-content .main-footer .pagination-footer .pagination {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   list-style-type: none;
+}
+
+.risk-summary .table-content .main-footer .pagination-footer  {
+   display: flex;
+   align-items: center;
+}
+
+.risk-summary .table-content .ar-table-thead tr {
+   border-radius: 8px 8px 0px 0px;
+}
+
+.risk-summary .table-content .ar-table-thead tr th {
+   font-size: 14px;
+   padding: 12px 17PX;
+   flex-direction: column;
+   align-self: stretch;
+   border-bottom: 1px solid #EAECF0;
+   border-top: 1px solid #EAECF0;
+
+}
+
+.risk-summary .table-content .ar-table {
+   border-radius: 8px;
+}
+
+.risk-summary .table-content .ar-table-tbody tr:hover .view-link {
+   display: inline-block !important;
+}
+
+.risk-summary .table-content .ar-table-tbody tr  .ar-table-cell {
+   padding: 20px 16px;
+}
+
+.main-risk-treatment-category .header .title {
+   color: #232D42;
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 600;
+   margin-top: 0px;
+   line-height: 175%;
+}
+
+.main-risk-treatment-category .chat-content {
+   display: flex;
+   height: 368px;
+   padding-top: 5px;
+   padding-bottom: 10px;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 8px;
+   background: #FFF;
+   box-shadow: 0px 10px 13px 0px rgba(17, 38, 146, 0.05);
+}
+
+.item-menu-profile {
+   width: 100%;
+   display: grid;
+}
+
+.item-menu-profile .item {
+   padding: 14px 0;
+   color: #000;
+   font-size: 14px;
+   font-weight: 400;
+   border-bottom: 1px solid #80808026;
+}

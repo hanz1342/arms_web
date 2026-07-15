@@ -1,0 +1,1 @@
+export type RiskAggregationType = "add_risk_agg_directorate" | "add_risk_agg_department" | "add_risk_agg_asec_wide" | any;

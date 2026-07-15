@@ -1,0 +1,170 @@
+.login-container {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    padding: 30px !important;
+    top: 45%;
+    margin-top: -150px !important
+}
+/* 
+:root {
+    --primary: #4E73DF;
+    --black: #000000;
+    --white: #fff;
+    --gray: #FEFEFE;
+    --Gray-700: #344054;
+    --Gray-300: #D0D5DD;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.centered-content {
+    width: 530px;
+    height: 646px;
+    border-radius: 8px;
+    background: var(--gray);
+    box-shadow: 0px 2px 13px 1px rgba(0, 0, 0, 0.15);
+}
+
+.section-header-auth {
+    width: 100%;
+    height: 256px;
+    flex-shrink: 0;
+    fill: var(--primary);
+    background: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-header-auth .logo {
+    width: 99.188px;
+    height: 102px;
+    flex-shrink: 0;
+    border-radius: 45px;
+    border: 1px solid var(--primary);
+    background:lightgray 50% / cover no-repeat;
+    margin-bottom: 16px;
+}
+
+.section-header-auth .title {
+    color: var(--white);
+    text-align: center;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 16px;
+}
+
+.section-header-auth .sub-text {
+    color: var(--white);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px; 
+}
+
+.form-input-auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input-auth form {
+    width: max-content;
+    margin: 40px 0 22px 0;
+}
+
+.form-input-auth .form-controller {
+    line-height: 40px;
+    margin-bottom: 16px;
+}
+
+.form-input-auth .form-controller .ar-row {
+    display: grid;
+}
+
+.form-input-auth .form-controller .ar-row .ar-form-item-label {
+    text-align: left;
+}
+
+:where(.css-dev-only-do-not-override-p7e5j5).ant-form-item .ant-form-item-label >label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    display: none !important;
+}
+
+.form-controller ::after {
+    display: none;
+}
+
+.form-controller .ant-form-item-row {
+    display: grid;
+}
+
+.form-controller .ant-form-item-label  {
+    text-align: left !important;
+    color: var(--Gray-700);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.form-input-auth .form-controller .input {
+    display: flex;
+    padding: 10px 14px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-300);
+    background: var(--white);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.form-input-auth .btn-login {
+    display: flex;
+    width: 320px;
+    height: 45px;
+    padding: 15px 120px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--primary);
+    margin-top: 40px;
+}
+
+.footer-auth {
+    color: var(--primary);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .centered-content {
+        max-width: 100%;
+    }
+} */
