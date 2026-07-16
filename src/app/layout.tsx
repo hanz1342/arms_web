@@ -2,7 +2,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { getCookie } from 'cookies-next';
+import { getCookie, setCookie } from 'cookies-next';
 import { Rubik } from 'next/font/google';
 import NextTopLoader from "nextjs-toploader";
 import Swal from "sweetalert2";
@@ -40,6 +40,8 @@ import { QueryClient, QueryClientProvider, } from '@tanstack/react-query';
 import { ChangePasswordInterface } from '@/types';
 import { changePassword } from '@/services';
 import { FontSizeContext } from '@/contexts/FontSizeOption';
+import { getScopes } from '@/services/auth';
+import Image from 'next/image';
 
 const { Header, Content, Sider } = Layout;
 type MenuItem = Required<MenuProps>['items'][number];
@@ -74,10 +76,10 @@ const items: MenuItem[] = [
   getItem('Setting', '', 8, <SettingOutlined />, [
     getItem('Impact Categories', '/impact_categories', 71),
     getItem('Department', '/departments', 72),
-    getItem('Division', '/divisions', 73),
     getItem('Directorate', '/directorates', 73),
-    getItem('Quarter', '/quarters', 74),
-    getItem('Roles', '/roles', 75),
+    getItem('Division', '/divisions', 74),
+    getItem('Cycle', '/cycles', 75),
+    getItem('Roles', '/roles', 76),
   ])
 ];
 
@@ -127,7 +129,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
     token: {
       fontSize,
       colorPrimary: '#0060A9',
-      fontFamily: '__Rubik_5c20f6',
+      fontFamily: 'Rubik, sans-serif',
       colorText: '#858796',
     },
     components: {
@@ -187,6 +189,13 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
     }
   }
 
+  React.useEffect(() => {
+    getScopes()
+    .then((profile) => {
+      setCookie('profile', profile)
+    })
+  }, [pathName]);
+
   return (
     <html lang="en">
       <Head>ASEC Risk Management</Head>
@@ -218,13 +227,20 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
                           <Button disabled={fontSize <= 14} onClick={() => setFontSize(fontSize - 1)} style={{ fontSize: 14 }}>-A</Button>
                           <Button onClick={() => setFontSize(fontSize + 1)} style={{ fontSize: 14, marginLeft: 15 }}>+A</Button>
                         </div>
-                        <div className='profile'>
+                        <div className='profile' style={{ display: 'flex', alignItems: 'center' }}>
+                          <div style={{ marginRight: 25 }}>
+                            <div style={{ lineHeight: "25px" }}>
+                              {profile ? profile.EmployeeName : 'Unknown'}
+                            </div>
+                            {/* <div style={{ lineHeight: "25px" }}>
+                              {profile ? (profile.roles && profile.roles.length > 0 ? JSON.parse(profile.roles)[0] : "Hi") : ""}
+                            </div> */}
+                          </div>
                           <Dropdown menu={{ items: menuItems }} trigger={['click', 'hover']}>
                             <a onClick={(e) => e.preventDefault()}>
                               <Space>
-                                {profile ? profile.EmployeeName : 'Unknown'}
-                                <div className='icon-profile'>
-                                  <img src='https://ps.w.org/user-avatar-reloaded/assets/icon-128x128.png?rev=2540745' alt='profile' />
+                                <div className='icon-profile' style={{ marginTop: 15 }}>
+                                  <Image src={'/../images/profile.jpeg'} alt="Profile" layout="intrinsic" width={120} height={120} style={{ width: 120 }} />
                                 </div>
                               </Space>
                             </a>

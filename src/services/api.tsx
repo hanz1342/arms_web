@@ -3,7 +3,7 @@ import { RiskCategoryFilter } from '@/types/risk-category';
 import axios, { AxiosRequestConfig } from 'axios'
 
 const api  = (option: AxiosRequestConfig) => axios({
-   baseURL: `${process.env.NEXT_PUBLIC_BASE_API_URL}/api`,
+   baseURL: `http://localhost:8000/api`,
    ...option
 })
 
