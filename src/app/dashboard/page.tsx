@@ -566,6 +566,7 @@ export default function Page() {
                                 loading={rsLoading}
                                 columns={riskSummaryColumns}
                                 dataSource={riskSummaries.data}
+                                rowKey="riskId"
                                 pagination={false}
                                 scroll={{
                                     y: 255,

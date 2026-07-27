@@ -2,7 +2,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { getCookie, setCookie } from 'cookies-next';
+import { getCookie, setCookie, deleteCookie } from 'cookies-next';
 import { Rubik } from 'next/font/google';
 import NextTopLoader from "nextjs-toploader";
 import Swal from "sweetalert2";
@@ -87,15 +87,42 @@ const items: MenuItem[] = [
 const queryClient = new QueryClient()
 
 export default function RootLayout({ children, }: { children: React.ReactNode }) {
-  let profile: any = getCookie('profile');
-  profile = profile ? JSON.parse(profile) : {};
+  const [profile, setProfile] = React.useState<any>({});
+  const router = useRouter();
+
+  const forceReLogin = React.useCallback(() => {
+    deleteCookie('token');
+    deleteCookie('profile');
+    router.replace('/auth');
+  }, [router]);
+
+  const safeParseProfile = (value: any) => {
+    try {
+      return typeof value === 'string' ? JSON.parse(value) : value;
+    } catch {
+      return null;
+    }
+  };
+
+  React.useEffect(() => {
+    const cookieProfile = getCookie('profile');
+    if (!cookieProfile) return;
+
+    const parsed = safeParseProfile(cookieProfile);
+    if (!parsed) {
+      // Cookie is corrupted/unparseable — don't render broken state, just force a clean login
+      forceReLogin();
+      return;
+    }
+
+    setProfile(parsed);
+  }, []);
 
   const [form] = Form.useForm();
   const [loading, setLoading] = React.useState<boolean>(false);
   const [openDrawerChangePass, setOpenDrawerChangePass] = React.useState(false);
   const [fontSize, setFontSize] = React.useState(14);
   const { token: { colorBgContainer }, } = theme.useToken();
-  const router = useRouter();
 
   const pathName = usePathname();
   const isAuthPage = ["/auth", "/logout"].includes(pathName);
@@ -193,11 +220,21 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
     if (isAuthPage) return;
 
     getScopes()
-    .then((profile) => {
-      setCookie('profile', profile)
+    .then((updatedProfile) => {
+      const currentProfile = safeParseProfile(getCookie('profile'));
+
+      // Cookie exists but no longer matches the server's view of who's logged in
+      // (stale, tampered with, or switched accounts) — don't patch over it, force a clean login.
+      if (currentProfile && currentProfile.user_id !== updatedProfile.user_id) {
+        forceReLogin();
+        return;
+      }
+
+      setCookie('profile', updatedProfile)
+      setProfile(updatedProfile)
     })
     .catch(() => {
-      router.replace('/auth');
+      forceReLogin();
     })
   }, [pathName]);
 
@@ -235,10 +272,10 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
                         <div className='profile' style={{ display: 'flex', alignItems: 'center' }}>
                           <div style={{ marginRight: 25 }}>
                             <div style={{ lineHeight: "25px" }}>
-                              {profile ? profile.EmployeeName : 'Unknown'}
+                              {profile?.EmployeeName ? profile.EmployeeName : 'Unknown'}
                             </div>
                             {/* <div style={{ lineHeight: "25px" }}>
-                              {profile ? (profile.roles && profile.roles.length > 0 ? JSON.parse(profile.roles)[0] : "Hi") : ""}
+                              {profile?.roles && profile.roles.length > 0 ? JSON.parse(profile.roles)[0] : "Hi"}
                             </div> */}
                           </div>
                           <Dropdown menu={{ items: menuItems }} trigger={['click', 'hover']}>
