@@ -282,7 +282,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
                             <a onClick={(e) => e.preventDefault()}>
                               <Space>
                                 <div className='icon-profile' style={{ marginTop: 15 }}>
-                                  <Image src={'/images/profile.jpeg'} alt="Profile" width={120} height={120} style={{ width: 120 }} />
+                                  <Image src={'/images/profile.jpeg'} alt="Profile" width={45} height={45} />
                                 </div>
                               </Space>
                             </a>
