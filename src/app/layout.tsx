@@ -240,7 +240,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
 
   return (
     <html lang="en">
-      <Head>ASEC Risk Management</Head>
+      <Head>NorthBridge Risk Management</Head>
       <body className={rubik.className} style={{ margin: 0, /*overflow: 'hidden'*/ }}>
         <StyledComponentsRegistry>
           <ConfigProvider theme={config} prefixCls="ar" iconPrefixCls="aricon">

@@ -95,7 +95,7 @@ export default function Auth() {
             >
                 <div style={{ textAlign: 'center' }}>
                     <img className="logo" src="/images/logo.png" alt="logo-auth" style={{ width: 100 }} />
-                    <h3 style={{ color: '#76838f' }}>ASEAN Risk Management System</h3>
+                    <h3 style={{ color: '#76838f' }}>NorthBridge Risk Management System</h3>
                 </div>
                 <Form.Item
                     name={"email"}
