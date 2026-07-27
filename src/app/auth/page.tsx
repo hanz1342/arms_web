@@ -84,7 +84,7 @@ export default function Auth() {
 
     return <Row gutter={[0, 0]}>
         <Col xs={0} sm={12} md={12} lg={16} xl={18}>
-            <Image src={'/../images/banner4.jpeg'} alt="Background Image" layout='fill' />
+            <Image src={'/../images/banner4.jpeg'} alt="Background Image" fill priority />
         </Col>
         <Col xs={24} sm={12} md={12} lg={8} xl={6} style={{ minHeight: '100vh', position: 'relative', borderTop: '5px solid #0060a9' }}>
             <Form
