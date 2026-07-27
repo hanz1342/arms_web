@@ -6,6 +6,7 @@ export * from './impact-category';
 export * from './employee';
 export * from './setting';
 export * from './api';
+export * from './auth';
 export * from './department';
 export * from './division';
 export * from './directorate';
