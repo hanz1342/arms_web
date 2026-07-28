@@ -68,7 +68,7 @@ const items: MenuItem[] = [
   getItem('Risk Aggregation', '', 4, <StockOutlined />, [
     getItem('Directorates', '/ra_directorates', 41),
     getItem('Departments', '/ra_departments', 42),
-    getItem('ASEC Wides', '/ra_asec_wides', 43),
+    getItem('Region Wides', '/ra_asec_wides', 43),
   ]),
   getItem('Cancelled Risks', '/cancelled_risks', 5, <UndoOutlined />),
   getItem('Risk Category', '/risk_category', 6, <DiffOutlined />),

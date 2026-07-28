@@ -175,7 +175,7 @@ export default function Page({ title } : { title: string }) {
         Back
       </Button>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <PageTitle title='Risk Aggregation ASEC (Update Lv3 chosen)' style={{ marginLeft: 15 }} />
+        <PageTitle title='Risk Aggregation Region (Update Lv3 chosen)' style={{ marginLeft: 15 }} />
       </div>
     </Col>
     <Col xl={4} style={{ display: 'flex', justifyContent: 'flex-end' }}>

@@ -307,7 +307,7 @@ export default function Page() {
   
   return(<Row gutter={[16, 16]}>
     <Col sm={24} md={8} xl={8}>
-        <PageTitle title='Risk Profile Form - ASEC Wide' />
+        <PageTitle title='Risk Profile Form - Region Wide' />
     </Col>
     <Col sm={24} md={16} xl={16} style={{ display: 'flex', justifyContent: 'flex-end' }}>
         <Input
